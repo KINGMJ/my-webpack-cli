@@ -1,0 +1,46 @@
+{
+  "name": "my-webpack-cli",
+  "version": "1.0.0",
+  "description": "webpack脚手架，基础版本，不包含任何框架",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "webpack-dev-server --open --colors --config webpack.dev.js",
+    "dev": "webpack --config webpack.dev.js --colors",
+    "build": "webpack --config webpack.prod.js --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KINGMJ/my-webpack-cli"
+  },
+  "keywords": [
+    "cli",
+    "webpack"
+  ],
+  "author": "jerry.mei",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7",
+    "webpack-manifest-plugin": "^2.0.3",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0"
+  }
+}
