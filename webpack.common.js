@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
@@ -42,12 +41,7 @@ const config = {
         },
         plugins: [
             //清空dist文件夹
-            new CleanWebpackPlugin(['dist']),
-            new webpack.optimize.SplitChunksPlugin({
-                chunks(chunk) {
-                    console.log(chunk);
-                }
-            })
+            new CleanWebpackPlugin(['dist'])
         ],
     }
 ;

@@ -2,10 +2,10 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-module.exports = env=>merge(common, {
+module.exports = merge(common, {
     mode: 'development',
-    // watch: true,
     devtool: 'inline-source-map',
+    // watch: true,
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),  //指定public资源地址（非项目打包的资源，比如：字体、图片等资源）
         publicPath: '/dist/',   //指定服务器根目录（http://localhost:9000/dist）
@@ -39,7 +39,5 @@ module.exports = env=>merge(common, {
                 ]
             }
         ]
-    },
-    plugins: [],
-
+    }
 });
