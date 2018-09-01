@@ -33,7 +33,8 @@ entry: {
 ```
 
 - `build`用于构建生产环境脚本
-- `dev-server`使用`webpack-dev-server`来作为服务器，须注释掉`watch:true`，取消注释`devServer`部分
+- `dev-server`使用`webpack-dev-server`来作为服务器，须注释掉`watch:true`，取消注释`devServer`部分 
+
     ```
      // watch: true,
     devServer: {
@@ -45,6 +46,7 @@ entry: {
     
     ```
 - `dev`使用`webpack's Watch Mode`来监听文件的改变
+
     ```
     watch: true,
     // devServer: {
@@ -84,5 +86,5 @@ entry: {
                     plugins: ['transform-remove-strict-mode']
                 }
         }
-}
+    }
     ```
