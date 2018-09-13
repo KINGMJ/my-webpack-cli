@@ -88,3 +88,4 @@ entry: {
         }
     }
     ```
+- 浏览器访问`http://localhost:9000/webpack-dev-server`可以看到`dev-server`里面文件的结构    
