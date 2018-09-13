@@ -37,8 +37,8 @@ module.exports = merge.smart(common, {
     plugins: [
         //提取公共css文件
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].min.css',
-            chunkFilename: '[id].[hash].min.css'
+            filename: 'css/[name].[hash].min.css',
+            chunkFilename: 'css/[id].[hash].min.css'
         }),
         //映射js文件与添加hash之后的文件
         new ManifestPlugin()

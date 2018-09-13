@@ -25,6 +25,7 @@ module.exports = merge(common, {
                 test: /\.css$/,
                 use: [
                     {loader: "style-loader"},
+                    {loader: "vue-style-loader"},
                     {loader: "css-loader", options: {sourceMap: true}},
                     {loader: 'postcss-loader'}
                 ]
@@ -33,6 +34,7 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 use: [
                     {loader: "style-loader"},
+                    {loader: "vue-style-loader"},
                     {loader: "css-loader", options: {sourceMap: true}}, // 将CSS转化成 CommonJS 模块
                     {loader: 'postcss-loader'}, // 预处理器，可配置浏览器兼容写法等属性
                     {loader: "sass-loader", options: {sourceMap: true}} // 将 Sass 编译成 CSS

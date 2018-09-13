@@ -1,11 +1,12 @@
+const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const config = {
         //多页面应用入口配置
         entry: {
-            home: './app/home/home.js',
-            about: './app/about/about.js',
-            contact: './app/contact/contact.js'
+            demo1: './app/demo1/demo1.js',
+            demo2: './app/demo2/demo2.js'
         },
         module: {
             rules: [
@@ -36,14 +37,23 @@ const config = {
                                         ['transform-runtime']
                                 }
                         }
+                },
+                {
+                    test: /\.vue$/,
+                    loader: 'vue-loader'
                 }
             ]
         },
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, './src')
+            }
+        },
         plugins: [
+            new VueLoaderPlugin(),
             //清空dist文件夹
             new CleanWebpackPlugin(['dist'])
         ],
     }
 ;
-
 module.exports = config;
