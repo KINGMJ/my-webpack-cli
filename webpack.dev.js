@@ -17,7 +17,7 @@ module.exports = merge(common, {
         filename: 'js/[name].js',    //根据入口文件输出的对应多个文件名
         path: path.resolve(__dirname, 'dist'),  //文件输出目录
         chunkFilename: 'js/[chunkhash:12].chunk.min.js',
-        publicPath: 'http://localhost:9000'
+        publicPath: 'http://localhost:9000'  //指定按需加载和外部资源的公共url
     },
     module: {
         rules: [

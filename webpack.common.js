@@ -9,21 +9,10 @@ const config = {
         },
         module: {
             rules: [
+                {test: /\.(png|svg|jpg|gif)$/, use: ['file-loader']},
+                {test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader']},
                 {
-                    test: /\.(png|svg|jpg|gif)$/,
-                    use: {
-                        loader: 'file-loader',
-                        options: {
-                            publicPath: 'dist/'
-                        }
-                    }
-                },
-                {
-                    test: /\.(woff|woff2|eot|ttf|otf)$/,
-                    use: ['file-loader']
-                },
-                {
-                    test: /\.js$/,
+                    test: /\.m?js$/,
                     exclude:
                         /(node_modules|bower_components)/,
                     use:
@@ -33,11 +22,16 @@ const config = {
                                 {
                                     presets: ['env'],
                                     plugins:
-                                        ['transform-runtime']
+                                        ['transform-runtime', 'transform-remove-strict-mode', 'transform-object-rest-spread']
                                 }
                         }
                 }
             ]
+        },
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, './app')
+            }
         },
         plugins: [
             //清空dist文件夹
