@@ -8,18 +8,9 @@ const uglify = require("gulp-uglify");
 
 //编译、合并、压缩less文件
 const buildLess = (cb) => {
-  return src(["src/less/**/wordpress.less", "src/assets/less/**/*.less"])
+  return src(["src/less/**/common.less", "src/less/**/*.less"])
     .pipe(concat("style.less"))
     .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(dest("src/assets/css"));
-};
-
-//合并压缩后的css文件
-const buildCss = (cb) => {
-  return src(["src/assets/css/*.css"])
-    .pipe(concat("style.min.css"))
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(dest("assets/css"));
@@ -27,11 +18,10 @@ const buildCss = (cb) => {
 
 //文件监听
 const auto = (cb) => {
-  watch("src/assets/less/**/*.less", series(buildLess, buildCss));
-  watch("src/assets/css/*.css", buildCss);
+  watch("src/assets/less/**/*.less", buildLess);
 };
 
 //生产环境构建
-exports.build = series(buildLess, buildCss);
+exports.build = buildLess;
 //开发环境构建
 exports.dev = auto;
