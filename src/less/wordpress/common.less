@@ -1,0 +1,81 @@
+/**
+全局样式
+**/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+.entry-content h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "PingFang SC", "Microsoft YaHei", "Times New Roman", "Arial",
+    Times, serif !important;
+}
+
+/**
+媒体查询，wordpress中用group来表示一个块，针对它的子类去调整盒子大小，这样就可以对它进行一些样式设置
+**/
+@media (min-width: 544px) {
+  .wp-block-group__inner-container {
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 922px) {
+  .wp-block-group__inner-container {
+    max-width: 1240px !important;
+  }
+}
+
+// /* 页面样式，高度设置为1屏 */
+// .hfeed.site {
+//   height: 100vh;
+// }
+
+/* header 样式*/
+.site-header {
+  .site-primary-header-wrap {
+    width: 80%;
+  }
+}
+
+/* footer 样式*/
+.site-footer {
+  // width: 100%;
+  margin: 0 auto;
+  // position: absolute;
+  // bottom: 0;
+  .ast-builder-footer-grid-columns {
+    display: flex;
+    justify-content: center;
+  }
+  .site-footer-above-section-1 {
+    width: 60%;
+  }
+  .footer-follow-widget {
+    position: relative;
+    top: -1em;
+    h4 {
+      margin-bottom: 1em;
+    }
+    .wp-block-media-text {
+      margin: 18px 0;
+    }
+  }
+}
+
+.footer-item {
+  dt {
+    font-weight: normal;
+    margin-bottom: 1.8em;
+    font-size: 16px;
+  }
+  dd {
+    font-size: 12px;
+    margin: 8px 0;
+    color: #888;
+  }
+}
