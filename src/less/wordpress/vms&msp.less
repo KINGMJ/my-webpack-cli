@@ -1,0 +1,102 @@
+// vms 和 msp 页面
+.post-26145,
+.post-26136 {
+  .block-title {
+    margin-bottom: 2em;
+  }
+  .wp-block-image {
+    margin: 0;
+  }
+
+  .tab-container {
+    box-shadow: 4px 4px 8px var(--ast-global-color-4);
+    .tab-block {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        padding: 12px 24px;
+        &.active {
+          background: var(--ast-global-color-8);
+          border-bottom: 3px solid var(--ast-global-color-0);
+        }
+        a,
+        a:focus,
+        a:hover,
+        a:visited {
+          color: var(--ast-global-color-6);
+        }
+      }
+    }
+  }
+
+  .wp-block-media-text {
+    &.media-box-with-shadow {
+      border: 1px solid var(--ast-global-color-4);
+      box-shadow: 4px 4px 12px var(--ast-global-color-4);
+    }
+    .mb-0 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// vms
+.post-26145 {
+  .card-with-img {
+    padding: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .media-box-with-shadow {
+    height: 108px;
+    padding: 12px;
+  }
+}
+
+// msp
+.post-26136 {
+  .card-with-img {
+    padding: 4em 0 0;
+    .wp-block-image {
+      height: 120px;
+    }
+    img {
+      width: 100%;
+    }
+    ul {
+      margin: 0 3em 1.5em 3em;
+      li {
+        margin: 6px 0;
+      }
+    }
+  }
+
+  .media-box-with-shadow {
+    padding: 16px 24px;
+    margin: 1.6em 0;
+    max-width: 90% !important;
+    .wp-block-media-text__content {
+      padding-left: 24px !important;
+      h5 {
+        margin-bottom: 8px;
+      }
+      ul {
+        margin: 0 0 1.5em 1.5em;
+      }
+    }
+  }
+
+  .msp-service-feature {
+    .media-container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      .wp-block-media-text__content {
+        padding: 0;
+      }
+    }
+  }
+}
