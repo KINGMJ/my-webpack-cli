@@ -34,11 +34,6 @@ h5 {
   }
 }
 
-// /* 页面样式，高度设置为1屏 */
-// .hfeed.site {
-//   height: 100vh;
-// }
-
 /* header 样式*/
 .site-header {
   position: fixed;
@@ -46,6 +41,16 @@ h5 {
   box-shadow: 1px 1px 24px #888;
   .site-primary-header-wrap {
     width: 80%;
+  }
+}
+
+/*
+  menu 样式
+*/
+.sub-menu .menu-link {
+  color: var(--ast-global-color-2) !important;
+  &:hover {
+    color: var(--ast-global-color-0) !important;
   }
 }
 
@@ -103,18 +108,19 @@ h5 {
   padding: 0;
   background: #494949;
   .ast-builder-grid-row-container-inner {
-    width: 72%;
+    width: 80%;
     margin: 0 auto;
     border-top: 1px solid #6e6e6e;
     padding: 16px 0 0;
     color: #ddd;
+    font-size: 14px;
     a,
     a:hover {
       color: #ddd;
     }
   }
   &.ast-footer-row-inline .site-footer-section {
-    flex-basis: 68%;
+    flex-basis: 80%;
     margin-left: 8%;
   }
 }
